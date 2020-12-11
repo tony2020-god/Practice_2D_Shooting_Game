@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -172,6 +173,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.3529412, g: 0.3529412, b: 0.3529412, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -188,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 'HP: 10'
 --- !u!222 &235324646
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -379,6 +381,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -466,7 +469,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!114 &535656285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,10 +482,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad78aaa5e4892c34c960add0a108dafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
-  textHp: {fileID: 235324645}
+  HP: 10
+  HPTEXT: {fileID: 235324645}
+  Soundhit: {fileID: 8300000, guid: 0bda53c42232dad41a2a79b16daf8b10, type: 3}
   aud: {fileID: 535656286}
-  soundHit: {fileID: 8300000, guid: 0bda53c42232dad41a2a79b16daf8b10, type: 3}
 --- !u!82 &535656286
 AudioSource:
   m_ObjectHideFlags: 0
@@ -624,6 +627,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -788,6 +792,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1100,6 +1105,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1201,11 +1207,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fb02abe8e8af64db74644224e11084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 4188934032714802657, guid: 8058be627f9654545a83c5749037a195, type: 3}
+  SoundFire: {fileID: 8300000, guid: e9552f51221d8f04999e786243374ffe, type: 3}
   point: {fileID: 1212127335}
+  bulletspeed: 338
+  bullet: {fileID: 4188934032714802657, guid: 8058be627f9654545a83c5749037a195, type: 3}
   aud: {fileID: 2129298586}
-  soundShoot: {fileID: 8300000, guid: e9552f51221d8f04999e786243374ffe, type: 3}
-  speed: 30
+  speed: 11.8
 --- !u!82 &2129298586
 AudioSource:
   m_ObjectHideFlags: 0

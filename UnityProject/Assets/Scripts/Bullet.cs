@@ -13,11 +13,12 @@ public class Bullet : MonoBehaviour
         Move();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject, 0.03f);
     }
-
     /// <summary>
     /// 讓子彈飛
     /// </summary>
@@ -27,3 +28,6 @@ public class Bullet : MonoBehaviour
     }
     #endregion
 }
+
+
+
